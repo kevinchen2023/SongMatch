@@ -1,0 +1,45 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Matches you with a song by your favorite artist!",
+          "examplePhrases": [
+            "Alexa, open Song Match."
+          ],
+          "keywords": [],
+          "name": "Song Match Kevin Chen",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "description": "An engaging song match quiz that asks you four questions about yourself then matches you to a song by your favorite artist based on your answers.",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Need a device or Alexa developer console.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:926617864975:function:a72f6f3f-392c-4229-b852-eea1e99987a7:Release_0"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

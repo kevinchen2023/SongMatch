@@ -1,0 +1,264 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "song match",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "BeginQuizIntent",
+          "slots": [
+            {
+              "name": "artist",
+              "type": "AMAZON.Musician"
+            }
+          ],
+          "samples": [
+            "{artist}"
+          ]
+        },
+        {
+          "name": "AnswerIntent",
+          "slots": [
+            {
+              "name": "firstquestion",
+              "type": "firstquestion"
+            },
+            {
+              "name": "secondandthirdquestion",
+              "type": "secondandthirdquestion"
+            },
+            {
+              "name": "fourthquestion",
+              "type": "fourthquestion"
+            }
+          ],
+          "samples": [
+            "{fourthquestion}",
+            "{secondandthirdquestion}",
+            "{firstquestion}"
+          ]
+        },
+        {
+          "name": "RunItBackIntent",
+          "slots": [
+            {
+              "name": "runitback",
+              "type": "runitback"
+            }
+          ],
+          "samples": [
+            "{runitback}"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "about to pass out"
+              }
+            },
+            {
+              "name": {
+                "value": "kinda tired"
+              }
+            },
+            {
+              "name": {
+                "value": "neutral"
+              }
+            },
+            {
+              "name": {
+                "value": "kinda buzzed"
+              }
+            },
+            {
+              "name": {
+                "value": "super jittery"
+              }
+            }
+          ],
+          "name": "firstquestion"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "no"
+              }
+            },
+            {
+              "name": {
+                "value": "yes"
+              }
+            }
+          ],
+          "name": "secondandthirdquestion"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "lofi beats to study to",
+                "synonyms": [
+                  "lofi beats",
+                  "lofi"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hip hop",
+                "synonyms": [
+                  "hip-hop"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "hard rap",
+                "synonyms": [
+                  "rap"
+                ]
+              }
+            }
+          ],
+          "name": "fourthquestion"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "nay"
+              }
+            },
+            {
+              "name": {
+                "value": "yay"
+              }
+            }
+          ],
+          "name": "runitback"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "BeginQuizIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "artist",
+              "type": "AMAZON.Musician",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.910361186553.207851356665"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RunItBackIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "runitback",
+              "type": "runitback",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1083838706672.1285846841804"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1545633524831.1347716407493",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What month were you born in?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1545633524831.190084519655",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which day were you born on?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1545633524831.788317813173",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which year were you born on?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.910361186553.207851356665",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, I didn\u0027t catch what you said. Could you repeat that?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1083838706672.1285846841804",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, what was that?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "29"
+}
